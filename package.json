@@ -4,13 +4,13 @@
   "description": "Get github release information",
   "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint 'src/**.js' 'tests/**.js' --fix",
-    "test": "eslint 'src/**.js' 'tests/**.js' && jest --coverage",
+    "lint": "eslint 'src/**.js' --fix",
+    "test": "eslint 'src/**.js' && jest --coverage",
     "build": "ncc build src/main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bruceadams/get-release"
+    "url": "git+https://github.com/mchehab/get-release"
   },
   "keywords": [
     "actions",
@@ -21,10 +21,10 @@
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@actions/exec": "^1.0.4",
-    "@actions/github": "^2.2.0"
+    "@actions/github": "^4.0.0"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.20.4",
+    "@vercel/ncc": "^0.27.0",
     "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.6.0",
@@ -54,5 +54,9 @@
     "hooks": {
       "pre-commit": "npm run build && git add dist/"
     }
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/mchehab/get-release/issues"
+  },
+  "homepage": "https://github.com/mchehab/get_release"
 }
