@@ -38,7 +38,7 @@ jobs:
 
       - name: Get release
         id: get_release
-        uses: bruceadams/get-release@v1.2.2
+        uses: mchehab/get-release@v1.2.2
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
